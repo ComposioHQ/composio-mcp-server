@@ -1,4 +1,5 @@
 # Composio MCP Server
+[![smithery badge](https://smithery.ai/badge/@ComposioHQ/composio-mcp-server)](https://smithery.ai/server/@ComposioHQ/composio-mcp-server)
 
 A Model Context Protocol (MCP) server implementation that exposes Composio tools and actions.
 
@@ -12,6 +13,16 @@ This server provides MCP-compatible access to various Composio applications like
 - A Composio API key, get it here by signing up at https://app.composio.dev
 
 ## Installation
+
+### Installing via Smithery
+
+To install Composio MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@ComposioHQ/composio-mcp-server):
+
+```bash
+npx -y @smithery/cli install @ComposioHQ/composio-mcp-server --client claude
+```
+
+### Installing Manually
 1. Clone the repository:
    ```bash
    git clone https://github.com/composio/composio-mcp-server.git
