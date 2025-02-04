@@ -1,0 +1,21 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - composioApiKey
+      - composioApps
+    properties:
+      composioApiKey:
+        type: string
+        description: The API key for accessing Composio services.
+      composioApps:
+        type: string
+        description: Comma-separated list of Composio apps to enable (e.g., 'gmail,linear').
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    config => ({ command: 'node', args: ['start.mjs'], env: { COMPOSIO_API_KEY: config.composioApiKey, COMPOSIO_APPS: config.composioApps } })
